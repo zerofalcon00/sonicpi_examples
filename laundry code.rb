@@ -13,9 +13,21 @@ def dry(heat)
   sleep(1)
 end
 
+def stain_removal()
+  stain = [true, false].choose
+  if stain == true
+    sample(:ambi_piano)
+    sleep(1)
+  else
+    sample(:bass_hard_c)
+    sleep(1)
+  end
+end
+
 
 3.times do
   wear(1)
+  stain_removal()
   wash(50)
   dry(:elec_bell)
 end
